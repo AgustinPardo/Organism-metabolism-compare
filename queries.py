@@ -2,8 +2,10 @@
 
 import pythoncyc
 
-# Todos los PGDBs
-	# pythoncyc.all_orgids()
+def All_PGDB():
+    PGDB_list=pythoncyc.all_orgids()
+    PGDB_list=[x.encode('ascii')[1:-1] for x in PGDB_list]
+    return (PGDB_list)
 	
 def PGDB_select(name):
 	meta = pythoncyc.select_organism(name)

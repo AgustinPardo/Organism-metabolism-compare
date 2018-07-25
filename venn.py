@@ -160,6 +160,8 @@ def venn2(labels, names=['A', 'B'], **options):
     # legend
     draw_text(fig, ax, 0.20, 0.56, names[0], colors[0], fontsize=fontsize)
     draw_text(fig, ax, 0.80, 0.56, names[1], colors[1], fontsize=fontsize)
+    
+    # Comment to desativate
     leg = ax.legend(names, loc='best', fancybox=True)
     leg.get_frame().set_alpha(0.5)
     
