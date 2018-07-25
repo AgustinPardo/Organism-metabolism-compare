@@ -6,23 +6,19 @@ import venn
 
 import matchingName
 
-#Diagrama
-def Draw(PGDB,PGDB_dict,out_name):	
+def Draw(lista_PGDB,PGDB_dict,out_name):	
 	labels_aux=[]
-	for elemnt in PGDB:
+
+	for elemnt in lista_PGDB:
 		pathways=PGDB_dict[elemnt]
 		labels_aux.append(pathways)
 	labels = venn.get_labels(
 	    labels_aux
-        , fill=['number', 'logic'])        
-	matplotlib.use('TkAgg')		
-		
-	fn = getattr(venn,"venn" + str(len(PGDB)))
-	fig, ax = fn(labels, names=PGDB)	
+        , fill=['number', 'logic'])       
+         
+	matplotlib.use('TkAgg')				
+	fn = getattr(venn,"venn" + str(len(lista_PGDB)))
+	fig, ax = fn(labels, names=lista_PGDB)	
 	fig.savefig(out_name, bbox_inches='tight')
 	plt.close()	
-
 	return(0)
-	
-def OutFile(PGDB,PGDB_dict,out_name):
-    return (0)

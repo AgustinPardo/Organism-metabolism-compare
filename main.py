@@ -6,23 +6,20 @@ import queries
 import compare
 import draw
 
-
-entrada_ficti_2=["ECOLI","KP13"]
-entrada_ficti_3=["ECOLI","KP13","PA01"]
-
-
-# Selecciono los PGDB's
-#~ PGDB_1=queries.PGDB_select("ECOLI")
-#~ PGDB_2=queries.PGDB_select("KP13")
+lista_PGDB=sys.argv[1:]
+#~ entrada_ficti_2=["ECOLI","KP13"]
+#~ entrada_ficti_3=["ECOLI","KP13","PA01"]
 
 # Calculo las pathways
 PGDB_pathways={}
-for entrada in entrada_ficti_2:
-	PGDB_pathways[entrada]=queries.All_pathways(queries.PGDB_select(entrada))
-
+for PGDB in lista_PGDB:
+	PGDB_pathways[PGDB]=queries.All_pathways(queries.PGDB_select(PGDB))
 # Diagrama Pathways
-draw.Draw(entrada_ficti_2,PGDB_pathways,"vennPathways2.png")
+draw.Draw(lista_PGDB,PGDB_pathways,"vennPathways.png")
 
-# Creo archivo con las pathways que se corresponden con el diagrama
-draw.OutFile(entrada_ficti_2,PGDB_pathways,"group_pathways.txt")
-
+# Calculo las Reactions
+PGDB_reactions={}
+for PGDB in lista_PGDB:
+	PGDB_reactions[PGDB]=queries.All_reactions(queries.PGDB_select(PGDB))
+# Diagrama Reactions
+draw.Draw(lista_PGDB,PGDB_reactions,"vennReactions.png")
