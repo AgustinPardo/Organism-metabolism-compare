@@ -6,24 +6,23 @@ import venn
 
 import matchingName
 
-#Diagrama Pathways
-def Draw(PGDB_name1,PGDB_name2,out_name,labels):
-	matplotlib.use('TkAgg')
-	fig, ax = venn.venn2(labels, names=[PGDB_name1, PGDB_name2])
+#Diagrama
+def Draw(PGDB,PGDB_dict,out_name):	
+	labels_aux=[]
+	for elemnt in PGDB:
+		pathways=PGDB_dict[elemnt]
+		labels_aux.append(pathways)
+	labels = venn.get_labels(
+	    labels_aux
+        , fill=['number', 'logic'])        
+	matplotlib.use('TkAgg')		
+		
+	fn = getattr(venn,"venn" + str(len(PGDB)))
+	fig, ax = fn(labels, names=PGDB)	
 	fig.savefig(out_name, bbox_inches='tight')
-	plt.close()
+	plt.close()	
+
 	return(0)
 	
-def OutFile(PGDB_name1,PGDB_name2,out_name,group_dict):	
-    real_names_dict=matchingName.NameIDPathwayDict()
-    out_file=open(out_name,"w")
-    for group in group_dict:
-        out_file.write("#"+group+"\n")
-        for elem in group_dict[group]:
-			try:
-				real_name=real_names_dict[elem]
-				out_file.write(elem+"\t"+real_name+"\n")
-			except:
-				out_file.write(elem+"\t"+"\n")
-    out_file.close()
+def OutFile(PGDB,PGDB_dict,out_name):
     return (0)
