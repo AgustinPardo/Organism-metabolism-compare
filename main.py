@@ -16,6 +16,10 @@ for PGDB in lista_PGDB:
 	PGDB_pathways[PGDB]=queries.All_pathways(queries.PGDB_select(PGDB))
 # Diagrama Pathways
 draw.Draw(lista_PGDB,PGDB_pathways,"vennPathways.png")
+#
+elements_dict=draw.Elements(lista_PGDB,PGDB_pathways)
+# Exportar a un archivo externo
+
 
 # Calculo las Reactions
 PGDB_reactions={}

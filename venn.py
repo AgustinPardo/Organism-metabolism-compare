@@ -106,6 +106,7 @@ def get_labels(data, fill=["number"]):
         for s in sets_for_difference:
             value = value - s
         set_collections[key] = value
+	
 
     labels = {k: "" for k in set_collections}
     if "logic" in fill:
@@ -118,8 +119,8 @@ def get_labels(data, fill=["number"]):
         data_size = len(s_all)
         for k in set_collections:
             labels[k] += "(%.1f%%)" % (100.0 * len(set_collections[k]) / data_size)
-
-    return labels
+	
+    return labels, set_collections
 
 def venn2(labels, names=['A', 'B'], **options):
     """
@@ -153,9 +154,10 @@ def venn2(labels, names=['A', 'B'], **options):
     # body
     draw_ellipse(fig, ax, 0.375, 0.3, 0.5, 0.5, 0.0, colors[0])
     draw_ellipse(fig, ax, 0.625, 0.3, 0.5, 0.5, 0.0, colors[1])
-    draw_text(fig, ax, 0.74, 0.30, labels.get('01', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.26, 0.30, labels.get('10', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.30, labels.get('11', '').split(':')[1], fontsize=fontsize)
+    #draw_text(fig, ax, 0.74, 0.30, labels.get('01', '').split(':')[1], fontsize=fontsize)
+    draw_text(fig, ax, 0.74, 0.30, labels.get('01', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.26, 0.30, labels.get('10', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.30, labels.get('11', ''), fontsize=fontsize)
     
     # legend
     draw_text(fig, ax, 0.20, 0.56, names[0], colors[0], fontsize=fontsize)
@@ -200,13 +202,13 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     draw_ellipse(fig, ax, 0.333, 0.633, 0.5, 0.5, 0.0, colors[0])
     draw_ellipse(fig, ax, 0.666, 0.633, 0.5, 0.5, 0.0, colors[1])
     draw_ellipse(fig, ax, 0.500, 0.310, 0.5, 0.5, 0.0, colors[2])
-    draw_text(fig, ax, 0.50, 0.27, labels.get('001', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.73, 0.65, labels.get('010', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.61, 0.46, labels.get('011', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.27, 0.65, labels.get('100', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.39, 0.46, labels.get('101', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.65, labels.get('110', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.51, labels.get('111', '').split(':')[1], fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.27, labels.get('001', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.73, 0.65, labels.get('010', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.61, 0.46, labels.get('011', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.27, 0.65, labels.get('100', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.39, 0.46, labels.get('101', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.65, labels.get('110', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.51, labels.get('111', ''), fontsize=fontsize)
     
     # legend
     draw_text(fig, ax, 0.15, 0.87, names[0], colors[0], fontsize=fontsize)
@@ -251,21 +253,21 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     draw_ellipse(fig, ax, 0.450, 0.500, 0.72, 0.45, 140.0, colors[1])
     draw_ellipse(fig, ax, 0.544, 0.500, 0.72, 0.45, 40.0, colors[2])
     draw_ellipse(fig, ax, 0.644, 0.400, 0.72, 0.45, 40.0, colors[3])
-    draw_text(fig, ax, 0.85, 0.42, labels.get('0001', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.68, 0.72, labels.get('0010', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.77, 0.59, labels.get('0011', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.32, 0.72, labels.get('0100', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.71, 0.30, labels.get('0101', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.66, labels.get('0110', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.65, 0.50, labels.get('0111', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.14, 0.42, labels.get('1000', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.17, labels.get('1001', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.29, 0.30, labels.get('1010', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.39, 0.24, labels.get('1011', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.23, 0.59, labels.get('1100', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.61, 0.24, labels.get('1101', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.35, 0.50, labels.get('1110', '').split(':')[1], fontsize=fontsize)
-    draw_text(fig, ax, 0.50, 0.38, labels.get('1111', '').split(':')[1], fontsize=fontsize)
+    draw_text(fig, ax, 0.85, 0.42, labels.get('0001', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.68, 0.72, labels.get('0010', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.77, 0.59, labels.get('0011', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.32, 0.72, labels.get('0100', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.71, 0.30, labels.get('0101', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.66, labels.get('0110', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.65, 0.50, labels.get('0111', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.14, 0.42, labels.get('1000', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.17, labels.get('1001', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.29, 0.30, labels.get('1010', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.39, 0.24, labels.get('1011', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.23, 0.59, labels.get('1100', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.61, 0.24, labels.get('1101', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.35, 0.50, labels.get('1110', ''), fontsize=fontsize)
+    draw_text(fig, ax, 0.50, 0.38, labels.get('1111', ''), fontsize=fontsize)
     
     # legend
     draw_text(fig, ax, 0.13, 0.18, names[0], colors[0], fontsize=fontsize)
