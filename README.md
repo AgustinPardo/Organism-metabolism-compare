@@ -16,8 +16,7 @@ python runpt.py
 ```python
 python main.py organism1 organism2 organism3
 ```
-You can run:
+  To know all the organisms metabolic reconstruction ids that are depositated in PathwayTools run:
 ```python
 PGDBconsult.py
 ```
-to know all the organisms metabolic reconstruction ids that are depositated in PathwayTools
