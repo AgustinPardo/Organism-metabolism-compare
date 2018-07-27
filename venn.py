@@ -144,6 +144,7 @@ def venn2(labels, names=['A', 'B'], **options):
     figsize = options.get('figsize', (9, 7))
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
+   
     
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -214,6 +215,8 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     draw_text(fig, ax, 0.15, 0.87, names[0], colors[0], fontsize=fontsize)
     draw_text(fig, ax, 0.85, 0.87, names[1], colors[1], fontsize=fontsize)
     draw_text(fig, ax, 0.50, 0.02, names[2], colors[2], fontsize=fontsize)
+    
+    # Comment to desativate
     leg = ax.legend(names, loc='best', fancybox=True)
     leg.get_frame().set_alpha(0.5)
     
@@ -274,6 +277,8 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     draw_text(fig, ax, 0.18, 0.83, names[1], colors[1], fontsize=fontsize)
     draw_text(fig, ax, 0.82, 0.83, names[2], colors[2], fontsize=fontsize)
     draw_text(fig, ax, 0.87, 0.18, names[3], colors[3], fontsize=fontsize)
+   
+    # Comment to desativate
     leg = ax.legend(names, loc='best', fancybox=True)
     leg.get_frame().set_alpha(0.5)
     
@@ -352,6 +357,8 @@ def venn5(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.97, 0.74, names[2], colors[2], fontsize=fontsize)
     draw_text(fig, ax, 0.88, 0.05, names[3], colors[3], fontsize=fontsize)
     draw_text(fig, ax, 0.12, 0.05, names[4], colors[4], fontsize=fontsize)
+   
+    # Comment to desativate
     leg = ax.legend(names, loc='best', fancybox=True)
     leg.get_frame().set_alpha(0.5)
     
@@ -464,6 +471,9 @@ def venn6(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.700, 0.247, names[3], colors[3], fontsize=fontsize)
     draw_text(fig, ax, 0.291, 0.255, names[4], colors[4], fontsize=fontsize)
     draw_text(fig, ax, 0.203, 0.484, names[5], colors[5], fontsize=fontsize)
+    
+    
+    # Comment to desativate
     leg = ax.legend(names, loc='best', fancybox=True)
     leg.get_frame().set_alpha(0.5)
     
