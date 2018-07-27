@@ -20,3 +20,9 @@ python main.py organism1 organism2 organism3
 ```python
 PGDBconsult.py
 ```
+### Requierementes
+1) pythoncyc python library
+
+[https://github.com/latendre/PythonCyc](https://github.com/latendre/PythonCyc)
+
+### Results
