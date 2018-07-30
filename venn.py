@@ -144,6 +144,8 @@ def venn2(labels, names=['A', 'B'], **options):
     figsize = options.get('figsize', (9, 7))
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
+    
+    legend_check=options.get('legend_check',True)
    
     
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
@@ -164,9 +166,10 @@ def venn2(labels, names=['A', 'B'], **options):
     draw_text(fig, ax, 0.20, 0.56, names[0], colors[0], fontsize=fontsize)
     draw_text(fig, ax, 0.80, 0.56, names[1], colors[1], fontsize=fontsize)
     
-    # Comment to desativate
-    leg = ax.legend(names, loc='best', fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+     # Comment to desativate
+    if legend_check == True:
+		leg = ax.legend(names, loc='best', fancybox=True)
+		leg.get_frame().set_alpha(0.5)
     
     return fig, ax
 
@@ -193,6 +196,9 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
     
+    legend_check=options.get('legend_check',True)
+    
+    
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
     ax.set_axis_off()
@@ -217,8 +223,9 @@ def venn3(labels, names=['A', 'B', 'C'], **options):
     draw_text(fig, ax, 0.50, 0.02, names[2], colors[2], fontsize=fontsize)
     
     # Comment to desativate
-    leg = ax.legend(names, loc='best', fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    if legend_check == True:
+		leg = ax.legend(names, loc='best', fancybox=True)
+		leg.get_frame().set_alpha(0.5)
     
     return fig, ax
 
@@ -244,6 +251,9 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     figsize = options.get('figsize', (12, 12))
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
+    
+    legend_check=options.get('legend_check',True)
+
     
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -278,9 +288,10 @@ def venn4(labels, names=['A', 'B', 'C', 'D'], **options):
     draw_text(fig, ax, 0.82, 0.83, names[2], colors[2], fontsize=fontsize)
     draw_text(fig, ax, 0.87, 0.18, names[3], colors[3], fontsize=fontsize)
    
-    # Comment to desativate
-    leg = ax.legend(names, loc='best', fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+     # Comment to desativate
+    if legend_check == True:
+		leg = ax.legend(names, loc='best', fancybox=True)
+		leg.get_frame().set_alpha(0.5)
     
     return fig, ax
 
@@ -306,6 +317,8 @@ def venn5(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     figsize = options.get('figsize', (13, 13))
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
+    
+    legend_check=options.get('legend_check',True)
     
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -358,9 +371,10 @@ def venn5(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.88, 0.05, names[3], colors[3], fontsize=fontsize)
     draw_text(fig, ax, 0.12, 0.05, names[4], colors[4], fontsize=fontsize)
    
-    # Comment to desativate
-    leg = ax.legend(names, loc='best', fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+     # Comment to desativate
+    if legend_check == True:
+		leg = ax.legend(names, loc='best', fancybox=True)
+		leg.get_frame().set_alpha(0.5)
     
     return fig, ax
 
@@ -386,6 +400,8 @@ def venn6(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     figsize = options.get('figsize', (20, 20))
     dpi = options.get('dpi', 96)
     fontsize = options.get('fontsize', 14)
+    
+    legend_check=options.get('legend_check',True)
     
     fig = plt.figure(0, figsize=figsize, dpi=dpi)
     ax = fig.add_subplot(111, aspect='equal')
@@ -473,9 +489,11 @@ def venn6(labels, names=['A', 'B', 'C', 'D', 'E'], **options):
     draw_text(fig, ax, 0.203, 0.484, names[5], colors[5], fontsize=fontsize)
     
     
+    
     # Comment to desativate
-    leg = ax.legend(names, loc='best', fancybox=True)
-    leg.get_frame().set_alpha(0.5)
+    if legend_check == True:
+		leg = ax.legend(names, loc='best', fancybox=True)
+		leg.get_frame().set_alpha(0.5)
     
     return fig, ax
 

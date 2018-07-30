@@ -6,7 +6,7 @@ import venn
 
 import matchingName
 
-def Draw(lista_PGDB,PGDB_dict,out_name):	
+def Draw(lista_PGDB,PGDB_dict,out_name,legend):	
 	labels_aux=[]
 
 	for elemnt in lista_PGDB:
@@ -17,7 +17,7 @@ def Draw(lista_PGDB,PGDB_dict,out_name):
 	
 	matplotlib.use('TkAgg')				
 	fn = getattr(venn,"venn" + str(len(lista_PGDB)))
-	fig, ax = fn(labels, names=lista_PGDB)	
+	fig, ax = fn(labels, names=lista_PGDB,legend_check=legend)	
 	fig.savefig(out_name, bbox_inches='tight')
 	plt.close()	
 	return(0)

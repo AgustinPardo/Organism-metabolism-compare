@@ -8,20 +8,19 @@
 import os
 import sys
 
+import threading
+
 def pathwayTools_service(input_path):
 	bashCommand  = input_path+" -lisp -python"
 	os.system(bashCommand)
-
-
-import threading
-import time
 
 def worker():
 	print('############################################################')
 
 w = threading.Thread(target=worker, name='Trabajo')   
-#t = threading.Thread(target=pathwayTools_service("/home/agustin/pathway-tools/pathway-tools"), name='Servicio')
+t = threading.Thread(target=pathwayTools_service("/home/agustin/pathway-tools/pathway-tools"), name='Servicio')
 
+t.start()
 w.start()
 
 
