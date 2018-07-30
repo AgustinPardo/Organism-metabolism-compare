@@ -1,5 +1,5 @@
 # PathwayTools-RetrieveData
-Compare pathways and reactions from pathwayTools metabolisms reconstrucions between especies. Yo could compare between 2, 3, 4, 5, and even 6 especies at the same time.
+Compare pathways and reactions from pathwayTools metabolism reconstrucion between especies. You could compare between 2, 3, 4, 5, and even 6 species at the same time.
 
 ### Usage
 1) Run pathwayTools on python-server mode:
