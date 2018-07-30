@@ -4,12 +4,12 @@ Compare pathways and reactions from pathwayTools metabolisms reconstrucions betw
 ### Usage
 1) Run pathwayTools on python-server mode:
 ```
-pathway-tools -python
+        pathway-tools -python
 ```
 Or run:
 
 ```python
-python runpt.py
+        python runpt.py
 ```
 
 2) Choose the organisms id that you want to compare and then excute:
@@ -18,7 +18,7 @@ python main.py organism1 organism2 organism3
 ```
   To know all the organisms metabolic reconstruction ids that are depositated in PathwayTools run:
 ```python
-PGDBconsult.py
+        PGDBconsult.py
 ```
 ### Requierementes
 1) pythoncyc python library
