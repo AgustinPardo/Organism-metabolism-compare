@@ -6,7 +6,7 @@ Compare pathways and reactions from pathwayTools metabolisms reconstrucions betw
 ```
         pathway-tools -python
 ```
-Or run:
+&nbsp Or run:
 
 ```python
         python runpt.py
@@ -14,7 +14,7 @@ Or run:
 
 2) Choose the organisms id that you want to compare and then excute:
 ```python
-python main.py organism1 organism2 organism3
+        python main.py organism1 organism2 organism3
 ```
   To know all the organisms metabolic reconstruction ids that are depositated in PathwayTools run:
 ```python
