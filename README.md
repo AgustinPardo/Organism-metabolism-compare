@@ -6,7 +6,7 @@ Compare pathways and reactions from pathwayTools metabolisms reconstrucions betw
 ```
         pathway-tools -python
 ```
-&nbsp Or run:
+&nbsp; Or run:
 
 ```python
         python runpt.py
