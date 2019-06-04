@@ -12,7 +12,7 @@ Compare pathways and reactions from pathwayTools metabolism reconstrucion betwee
         python runpt.py
 ```
 
-2) Choose the organisms id that you want to compare and then excute:
+2) Choose the organisms id that you want to compare and then execute:
 ```python
         python main.py organism1 organism2 organismn ...
 ```
