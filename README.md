@@ -1,4 +1,4 @@
-# PathwayTools-RetrieveData
+# PathwayTools-MetabolicCompare
 Compare pathways and reactions from pathwayTools metabolism reconstrucion between especies. You could compare between 2, 3, 4, 5, and even 6 species at the same time.
 
 ### Usage
