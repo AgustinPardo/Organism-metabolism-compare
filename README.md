@@ -29,8 +29,8 @@ Compare pathways and reactions from pathwayTools metabolism reconstrucion(PGDBs)
 
 Comparing 6 PGDBs(The most complex example):
 
-Each PGDB have a unique code, (000001, 000010, etc), to mqake easi the visualization of the comparison.
-Whe you compare for example the 000001 between the 000010 you will have the 000011:#, been # the result of the comparison.
+Each PGDB have a unique code, (000001, 000010, etc), to make ease the visualization of the comparison.
+When you compare for example the 000001 between the 000010 you will have the 000011:#,  been # the numeric result of the comparison.
 
 Pathways
 ![alt text](https://github.com/AgustinPardo/PathwayTools-MetabolicCompare/blob/master/vennPathways.png)
