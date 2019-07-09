@@ -1,5 +1,5 @@
 # PathwayTools-MetabolicCompare
-Compare pathways and reactions from pathwayTools metabolism reconstrucion between especies. You could compare between 2, 3, 4, 5, and even 6 species at the same time.
+Compare pathways and reactions from pathwayTools metabolism reconstrucion(PGDBs) between especies. You could compare between 2, 3, 4, 5, and even 6 species at the same time. The result is the conjunction of those pathways and reactions.
 
 ### Usage
 1) Run pathwayTools on python-server mode:
@@ -27,7 +27,11 @@ Compare pathways and reactions from pathwayTools metabolism reconstrucion betwee
 
 ### Results
 
-Comparing 6 PGDBs:
+Comparing 6 PGDBs(The most complex example):
+
+Each PGDB have a unique code, (000001, 000010, etc), to mqake easi the visualization of the comparison.
+Whe you compare for example the 000001 between the 000010 you will have the 000011:#, been # the result of the comparison.
+
 Pathways
 ![alt text](https://github.com/AgustinPardo/PathwayTools-MetabolicCompare/blob/master/vennPathways.png)
 
