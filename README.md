@@ -20,7 +20,7 @@ Compare pathways and reactions from pathwayTools metabolism reconstruction (PGDB
 ```python
         PGDBconsult.py
 ```
-### Requierementes
+### Requirements
 * [pythoncyc](https://github.com/latendre/PythonCyc) python library
 
 * [Pathway-Tools](http://bioinformatics.ai.sri.com/ptools/installation-guide/released/index.html) installed
