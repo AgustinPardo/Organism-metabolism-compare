@@ -26,3 +26,10 @@ Compare pathways and reactions from pathwayTools metabolism reconstrucion betwee
 * [Pathway-Tools](http://bioinformatics.ai.sri.com/ptools/installation-guide/released/index.html) installed
 
 ### Results
+
+Comparing 6 PGDBs:
+Pathways
+![alt text](https://github.com/AgustinPardo/PathwayTools-MetabolicCompare/blob/master/vennPathways.png)
+
+Reactions
+![alt text](https://github.com/AgustinPardo/PathwayTools-MetabolicCompare/blob/master/vennReactions.png)
